@@ -1,14 +1,18 @@
 // Slides = NR OF SLIDES; speed = SLIDER SPEED(MS);
 // Basic Slider Dev Gonçalo M.
+// Slides = NR OF SLIDES; speed = SLIDER SPEED(MS);
 function Slider(item_class,slides,speed){
         
-        let count = 0;
+        let count = 1;
+        // Mostrar o primeiro slide
+        var iclass = item_class+"[data-slide=1]";
+        $(iclass).show();
         
         function initSlider(max){
                 
                 var main_class = $(item_class);
-                // Esconder slide antigo
                 
+                // Esconder slide antigo
                 main_class.each(function(){
                     if($(this).attr('data-slide') == count){
                         $(this).hide();
@@ -18,7 +22,7 @@ function Slider(item_class,slides,speed){
                 // Incrementar Contagem de Slider
                 count++;
                 
-                // verificar se passou o máximo de slides
+                // Verificar se passou o máximo de slides
                 if(count > max){
                     count = 1;
                 }else{
@@ -28,11 +32,11 @@ function Slider(item_class,slides,speed){
                 // Mostrar slide novo
                 main_class.each(function(){
                     if($(this).attr('data-slide') == count){
-                        $(this).show();
+                        $(this).slideDown("medium");
                     }
                 });
 
-                console.log("New slide "+count);
+                console.log("Slide "+count);
                 
         }
         
