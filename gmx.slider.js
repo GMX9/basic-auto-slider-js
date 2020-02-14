@@ -1,8 +1,9 @@
 //Slider Function - item_class -> Your slide item class |  slides -> total number of slides | speed -> slider speed in ms (miliseconds) | controls -> enabled ou disabled | controls_type -> squared ou circle
 //Slider Function - item_class -> A class do item do slider |  slides -> número total de slides | speed -> velocidade da passagem de slides em ms (milisegundos) | controls -> enabled or disabled | controls_type -> squared or circle
-function Slider(item_class,slides,speed,controls,controls_type,slider_color){
+function Slider(item_class,speed,controls,controls_type,slider_color){
         
         let count = 1;
+        let slides = $(item_class).length;
         let clicked = 0;
         startSlider = 0;
         
