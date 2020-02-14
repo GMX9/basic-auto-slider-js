@@ -1,4 +1,4 @@
-# basic-auto-slider-js
+# gmxSliderJS
 Simple slider which runs automated
 
 First load the JS library.
